@@ -1,0 +1,117 @@
+:root {
+    --small-padding: .25rem;
+    --default-padding: .5rem;
+    --large-padding: 1rem;
+    --x-large-padding: 2rem;
+    --color-light: #f4f4f4;
+    --color-medium: #ccc;
+    --color-dark: #333;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--color-light);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    background-color: #fff;
+    box-shadow: 0 0 var(--x-large-padding) rgba(0, 0, 0, .1);
+    border-radius: var(--default-padding);
+    padding: var(--x-large-padding);
+    max-width: 600px;
+}
+
+.form-group {
+    margin-bottom: var(--x-large-padding);
+}
+
+.form-label {
+    margin-bottom: var(--small-padding);
+}
+
+.form-field label {
+    align-items: center;
+    display: flex;
+    margin-bottom: var(--default-padding);
+}
+
+.form-field label input {
+    order: 1;
+    margin-right: var(--default-padding);
+}
+
+.form-field label span {
+    flex: 0 1 auto;
+    order: 2;
+}
+
+input,
+select,
+textarea {
+    border: var(--color-medium) 1px solid;
+    background-color: #fff;
+    appearance: none;
+}
+
+input:not([type="checkbox"]):not([type="radio"]),
+textarea,
+select {
+    border-radius: var(--small-padding);
+    padding: 0 var(--small-padding);
+    width: 100%;
+}
+
+input:not([type="checkbox"]):not([type="radio"]),
+select {
+    height: 2rem
+}
+
+textarea {
+    padding: var(--default-padding);
+}
+
+.is-required .form-label label:before {
+    content: "* ";
+}
+
+.form-label label:after {
+    content: ":";
+}
+
+@media (min-width: 768px) {
+    body {
+        align-items: center;
+        display: flex;
+        min-height: 100vh;
+    }
+    .form-group {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: var(--default-padding);
+        margin-bottom: var(--large-padding);
+    }
+    .form-group.center-align {
+        align-items: center;
+        text-align: right;
+    }
+    .form-label {
+        justify-self: flex-end;
+    }
+    .form-submit {
+        grid-column: 2/3;
+    }
+}
