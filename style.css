@@ -62,6 +62,7 @@ main {
 input,
 select,
 textarea {
+    -webkit-appearance: none;
     border: var(--color-medium) 1px solid;
     background-color: #fff;
     appearance: none;
