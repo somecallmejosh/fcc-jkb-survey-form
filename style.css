@@ -44,36 +44,29 @@ main {
 }
 
 .form-field label {
-    align-items: center;
-    display: flex;
+    display: block;
     margin-bottom: var(--default-padding);
 }
 
 .form-field label input {
-    order: 1;
-    margin-right: var(--default-padding);
-}
-
-.form-field label span {
-    flex: 0 1 auto;
-    order: 2;
+    float: left;
 }
 
 input,
 select,
 textarea {
-    -webkit-appearance: none;
     border: var(--color-medium) 1px solid;
     background-color: #fff;
-    appearance: none;
 }
 
 input:not([type="checkbox"]):not([type="radio"]),
 textarea,
 select {
+    -webkit-appearance: none;
     border-radius: var(--small-padding);
     padding: 0 var(--small-padding);
     width: 100%;
+    appearance: none;
 }
 
 input:not([type="checkbox"]):not([type="radio"]),
